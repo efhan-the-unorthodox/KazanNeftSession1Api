@@ -44,9 +44,6 @@ router.route("/getAssets").post((req,res) =>{
     });
 });
 
-router.route('/getfilteredAssets').post((req,res)=>{
-
-});
 
 router.route('/getEmployees').post((req, res)=>{
 
