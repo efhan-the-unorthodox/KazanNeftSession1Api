@@ -46,5 +46,15 @@ router.route("/getAssets").post((req,res) =>{
 
 
 router.route('/getEmployees').post((req, res)=>{
+    db.query(`SELECT * FROM employees`, function(err, results){
+        if(err) throw err;
+        res.send(results);
+     });
+});
 
+router.route('/getLocations').post((req,res) =>{
+    db.query(`SELECT * FROM locations`, function(err, results){
+        if(err) throw err;
+        res.send(results);
+    });
 });
